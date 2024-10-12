@@ -24,7 +24,7 @@ You can also just clone this repository directly if you do not want to track you
 #### Clone the repository
 
 ```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
+git clone https://github.com/iAtlantis/nvim.git ~/.config/nvim
 ```
 
 #### Start Neovim
@@ -32,3 +32,7 @@ git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
 ```shell
 nvim
 ```
+
+# Some awesome plugins
+- lazygit [一款超酷超好用的git管理](https://github.com/kdheepak/lazygit.nvim)
+- overseer [自动运行脚本](https://github.com/stevearc/overseer.nvim)
