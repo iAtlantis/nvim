@@ -13,7 +13,8 @@ return {
     -- Configuration table of features provided by AstroLSP
     features = {
       codelens = true, -- enable/disable codelens refresh on start
-      inlay_hints = false, -- enable/disable inlay hints on start
+      lsp_handlers = true, -- enable codelens refresh on start
+      inlay_hints = true, -- enable/disable inlay hints on start
       semantic_tokens = true, -- enable/disable semantic token highlighting
     },
     -- customize lsp formatting options
@@ -32,10 +33,17 @@ return {
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
       },
-      timeout_ms = 1000, -- default format timeout
+      timeout_ms = 100000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
+    },
+    capabilities = {
+      workspace = {
+        didChangeWatchedFiles = {
+          dynamicRegistration = true,
+        },
+      },
     },
     -- enable servers that you already have installed without mason
     servers = {
